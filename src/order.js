@@ -1,0 +1,20 @@
+// 주문
+
+const MAX_ITEMS = 20;
+const FREE_SHIPPING_PRICE = 30000;
+const SHIPPING_FEE = 3000;
+
+export function createOrder(memberId, items) {
+  if (items.length > MAX_ITEMS) {
+    throw new Error(`한 번에 ${MAX_ITEMS}개까지만 주문할 수 있습니다`);
+  }
+  return { memberId, items, status: "READY" };
+}
+
+export function totalPrice(order) {
+  return order.items.reduce((sum, item) => sum + item.price * item.count, 0);
+}
+
+export function shippingFee(order) {
+  return totalPrice(order) >= FREE_SHIPPING_PRICE ? 0 : SHIPPING_FEE;
+}
