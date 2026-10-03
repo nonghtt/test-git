@@ -3,7 +3,11 @@
 const PAGE_SIZE = 10;
 
 export function createNotice(id, title, body) {
-  return { id, title, body, createdAt: Date.now() };
+  return { id, title, body, pinned: false, createdAt: Date.now() };
+}
+
+export function pinNotice(notice) {
+  return { ...notice, pinned: true };
 }
 
 export function latestNotices(notices) {
