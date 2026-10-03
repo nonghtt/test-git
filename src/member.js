@@ -11,8 +11,3 @@ export function addPoint(member, amount) {
 export function displayName(member) {
   return `${member.name} 님`;
 }
-
-export function gradeLabel(member) {
-  const labels = { BASIC: "일반", SILVER: "실버", GOLD: "골드" };
-return labels[member.grade];
-}
