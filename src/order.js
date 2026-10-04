@@ -2,7 +2,7 @@
 
 const MAX_ITEMS = 20;
 const FREE_SHIPPING_PRICE = 30000;
-const SHIPPING_FEE = 3000;
+const SHIPPING_FEE = 3500;
 
 export function createOrder(memberId, items) {
   if (items.length > MAX_ITEMS) {
@@ -17,4 +17,9 @@ export function totalPrice(order) {
 
 export function shippingFee(order) {
   return totalPrice(order) >= FREE_SHIPPING_PRICE ? 0 : SHIPPING_FEE;
+}
+
+export function couponDiscount(order, rate) {
+  const maxRate = 0.3;
+  return Math.floor(totalPrice(order) * Math.min(rate, maxRate));
 }
