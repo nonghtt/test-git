@@ -3,6 +3,7 @@
 const MAX_ITEMS = 20;
 const FREE_SHIPPING_PRICE = 30000;
 const SHIPPING_FEE = 3500;
+const MIN_ORDER_PRICE = 10000;
 
 export function createOrder(memberId, items) {
   if (items.length > MAX_ITEMS) {
@@ -22,4 +23,10 @@ export function shippingFee(order) {
 export function couponDiscount(order, rate) {
   const maxRate = 0.3;
   return Math.floor(totalPrice(order) * Math.min(rate, maxRate));
+}
+
+export function checkMinPrice(order) {
+  if (totalPrice(order) < MIN_ORDER_PRICE) {
+    throw new Error(`${MIN_ORDER_PRICE}원 이상부터 주문할 수 있습니다`);
+  }
 }
