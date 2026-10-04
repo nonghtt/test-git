@@ -2,7 +2,7 @@
 
 const MAX_ITEMS = 20;
 const FREE_SHIPPING_PRICE = 30000;
-const SHIPPING_FEE = 3000;
+const SHIPPING_FEE = 3500;
 
 export function createOrder(memberId, items) {
   if (items.length > MAX_ITEMS) {
