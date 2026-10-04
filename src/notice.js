@@ -15,3 +15,7 @@ export function latestNotices(notices) {
     .sort((a, b) => b.createdAt - a.createdAt)
     .slice(0, PAGE_SIZE);
 }
+
+export function searchNotices(notices, keyword) {
+  return notices.filter((notice) => notice.title.includes(keyword));
+}
