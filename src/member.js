@@ -9,7 +9,7 @@ export function addPoint(member, amount) {
 }
 
 export function displayName(member) {
-  return `${member.name} 님`;
+  return `${member.name} 고객님`;
 }
 
 export function gradeLabel(member) {
