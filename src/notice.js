@@ -2,8 +2,8 @@
 
 const PAGE_SIZE = 10;
 
-export function createNotice(id, title, body, category = "일반") {
-  return { id, title, body, category, pinned: false, createdAt: Date.now() };
+export function createNotice(id, title, body) {
+  return { id, title, body, pinned: false, createdAt: Date.now() };
 }
 
 export function pinNotice(notice) {
