@@ -13,7 +13,7 @@ export function displayName(member) {
 }
 
 export function gradeLabel(member) {
-  const labels = { BASIC: "일반", SILVER: "실버", GOLD: "골드" };
+  const labels = { BASIC: "일반", SILVER: "실버", GOLD: "골드", VIP: "VIP" };
 return labels[member.grade];
 }
 
