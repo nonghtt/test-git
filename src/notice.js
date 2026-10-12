@@ -19,3 +19,7 @@ export function latestNotices(notices) {
 export function searchNotices(notices, keyword) {
   return notices.filter((notice) => notice.title.includes(keyword));
 }
+
+export function pinnedNotices(notices) {
+  return notices.filter((notice) => notice.pinned);
+}
