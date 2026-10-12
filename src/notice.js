@@ -23,3 +23,7 @@ export function searchNotices(notices, keyword) {
 export function pinnedNotices(notices) {
   return notices.filter((notice) => notice.pinned);
 }
+
+export function noticesByCategory(notices, category) {
+  return notices.filter((notice) => notice.category === category);
+}
