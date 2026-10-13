@@ -27,3 +27,7 @@ export function pinnedNotices(notices) {
 export function noticesByCategory(notices, category) {
   return notices.filter((notice) => notice.category === category);
 }
+
+export function isTitleTooLong(title) {
+  return title.length > 50;
+}
