@@ -2,8 +2,8 @@
 
 const PAGE_SIZE = 10;
 
-export function createNotice(id, title, body) {
-  return { id, title, body, pinned: false, createdAt: Date.now() };
+export function createNotice(id, title, body, category = "일반") {
+  return { id, title, body, category, pinned: false, createdAt: Date.now() };
 }
 
 export function pinNotice(notice) {
@@ -22,4 +22,8 @@ export function searchNotices(notices, keyword) {
 
 export function pinnedNotices(notices) {
   return notices.filter((notice) => notice.pinned);
+}
+
+export function noticesByCategory(notices, category) {
+  return notices.filter((notice) => notice.category === category);
 }
