@@ -36,5 +36,5 @@ export function cancelOrder(order) {
   if (order.status !== "READY") {
     throw new Error("배송이 시작된 주문은 취소할 수 없습니다");
   }
-  return { ...order, status: "CANCELED", canceledAt: Date.now() };
+  return { ...order, status: "CANCELED", canceledAt: Date.now(), cancelReason: reason };
 }
