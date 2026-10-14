@@ -9,7 +9,7 @@ export function createOrder(memberId, items) {
   if (items.length > MAX_ITEMS) {
     throw new Error(`한 번에 ${MAX_ITEMS}개까지만 주문할 수 있습니다`);
   }
-  return { memberId, items, status: "READY" };
+  return { memberId, items, status: "READY", canceledAt: null };
 }
 
 export function totalPrice(order) {
