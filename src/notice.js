@@ -32,7 +32,7 @@ export function isTitleTooLong(title) {
   return title.length > 50;
 }
 
-export function cancelOrder(order) {
+export function cancelOrder(order, reason) {
   if (order.status !== "READY") {
     throw new Error("배송이 시작된 주문은 취소할 수 없습니다");
   }
