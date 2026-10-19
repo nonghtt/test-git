@@ -14,7 +14,7 @@ export function createOrder(memberId, items) {
     throw new Error("주문할 상품이 없습니다");
   }
 
-  return { memberId, items, status: "READY" };
+  return { memberId, items, status: "READY", canceledAt: null };
 }
 
 export function totalPrice(order) {
