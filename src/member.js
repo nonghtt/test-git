@@ -21,3 +21,7 @@ export function earnPoint(member, price) {
   const rate = 0.01;
   return addPoint(member, Math.floor(price * rate));
 }
+
+export function withdrawMember(member) {
+  return { ...member, status: "WITHDRAWN", point: 0 };
+}
