@@ -25,3 +25,7 @@ export function earnPoint(member, price) {
 export function withdrawMember(member) {
   return { ...member, status: "WITHDRAWN", point: 0 };
 }
+
+export function isVip(member) {
+  return member.grade === "VIP";
+}
