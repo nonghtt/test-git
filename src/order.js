@@ -35,7 +35,3 @@ export function checkMinPrice(order) {
     throw new Error(`${MIN_ORDER_PRICE}원 이상부터 주문할 수 있습니다`);
   }
 }
-
-export function addMemo(order, memo) {
-  return { ...order, memo };
-}
