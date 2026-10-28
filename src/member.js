@@ -27,5 +27,5 @@ export function withdrawMember(member) {
 }
 
 export function isVip(member) {
-  return member.grade === "VIP";
+  return member.grade.toUpperCase() === "VIP";
 }
