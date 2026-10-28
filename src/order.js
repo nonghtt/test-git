@@ -37,6 +37,10 @@ export function checkMinPrice(order) {
 }
 
 export function addMemo(order, memo) {
+  if (!memo) {
+    return order;
+  }
+
   if (memo.length > 200) {
     throw new Error("메모는 200자까지 쓸 수 있습니다");
   }
