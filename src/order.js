@@ -47,3 +47,11 @@ export function addMemo(order, memo) {
   
   return { ...order, memo };
 }
+
+export function earnPoint(order) {
+  if (order.canceledAt) {
+    return 0;
+  }
+
+  return Math.floor(totalPrice(order) * 0.01);
+}
