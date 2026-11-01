@@ -29,7 +29,7 @@ export function noticesByCategory(notices, category) {
 }
 
 export function isTitleTooLong(title) {
-  return title.length > 50;
+  return title.trim().length > 50;
 }
 
 export function cancelOrder(order, reason) {
