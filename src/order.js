@@ -47,3 +47,7 @@ export function addMemo(order, memo) {
   
   return { ...order, memo };
 }
+
+export function earnPoint(order) {
+  return Math.floor(totalPrice(order) * 0.01);
+}
